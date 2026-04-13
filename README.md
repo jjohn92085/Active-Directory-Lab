@@ -124,6 +124,20 @@ During software deployment, the Chrome installation failed due to setting the in
 
 ---
 
+## 📸 Screenshots
+
+### OU Structure
+![OU](Screenshots/ou-structure.png)
+
+### GPO Configuration
+![GPO](Screenshots/gpo.png)
+
+### Chrome Installed
+![Chrome](Screenshots/chrome-installed.png)
+
+### Drive Mapping
+![Drive](Screenshots/drive-mapping.png)
+
 ## 🎯 Summary
 
 This project demonstrates hands-on experience with Active Directory administration, including OU design, Group Policy management, software deployment, and role-based access control. 
