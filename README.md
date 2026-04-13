@@ -1,5 +1,9 @@
 # Active Directory Lab (Windows Server + GPO)
 
+## 🗺️ Lab Architecture
+
+![AD Lab Diagram](Diagrams/ad-lab-diagram.png)
+
 ## 📌 Overview
 
 This project demonstrates the setup and management of an Active Directory environment using Windows Server. It includes user and computer management, Group Policy configuration, software deployment, and access control in a simulated enterprise environment.
