@@ -4,6 +4,8 @@
 
 ![AD Lab Diagram](Diagrams/ad-lab-diagram.png)
 
+This diagram shows the domain controller and client relationship within the lab.local domain, including applied policies and shared resources.
+
 ## 📌 Overview
 
 This project demonstrates the setup and management of an Active Directory environment using Windows Server. It includes user and computer management, Group Policy configuration, software deployment, and access control in a simulated enterprise environment.
