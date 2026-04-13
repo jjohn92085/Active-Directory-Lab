@@ -8,6 +8,17 @@
 
 This project demonstrates the setup and management of an Active Directory environment using Windows Server. It includes user and computer management, Group Policy configuration, software deployment, and access control in a simulated enterprise environment.
 
+## 🔧 Key Features
+
+- Active Directory Domain Services (AD DS) deployment
+- Organizational Units (HR, IT, Sales)
+- Group Policy Objects (GPO) configuration
+- Software deployment via GPO (Chrome)
+- Drive mapping using Group Policy Preferences
+- Role-Based Access Control (RBAC)
+- User restrictions (CMD, Control Panel)
+- Password and account lockout policies
+
 ---
 
 ## 🖥️ Lab Environment
