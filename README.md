@@ -129,28 +129,30 @@ During software deployment, the Chrome installation failed due to setting the in
 
 ## 📸 Screenshots
 
-## 📸 Screenshots
-
 ### 🏢 OU Structure
-![OU Structure](Screenshots/GP 1.png)
+![OU Structure](Screenshots/ou-structure.png)
 
-### ⚙️ GPO Configuration
-![GPO](Screenshots/Control Panel disable.png)
+### 🔗 GPO Links and OU Assignment
+![GPO Links](Screenshots/gpo-links.png)
 
-### 💻 Software Deployment (Chrome GPO)
-![Chrome GPO](Screenshots/Chrome install 2.png)
+### ⚙️ GPO Configuration (Control Panel Restriction)
+![GPO](Screenshots/control-panel-disable.png)
+
+### 📦 Software Deployment (Chrome GPO)
+![Chrome GPO](Screenshots/chrome-install-2.png)
 
 ### 🌐 Chrome Installed on Client
-![Chrome Installed](Screenshots/Chrome install 7.png)
+![Chrome Installed](Screenshots/chrome-install-7.png)
 
 ### 💾 Drive Mapping (Z:)
-![Drive Mapping](Screenshots/Mapped drive 2.png)
+![Drive Mapping](Screenshots/mapped-drive-2.png)
 
 ### 🔐 Role-Based Access Control (RBAC)
-![RBAC](Screenshots/RBAC 3.png)
+![RBAC](Screenshots/rbac-3.png)
 
 ### 🔑 Password Policy
-![Password Policy](Screenshots/Password config 2.png)
+![Password Policy](Screenshots/password-config-2.png)
+
 ## 🎯 Summary
 
 This project demonstrates hands-on experience with Active Directory administration, including OU design, Group Policy management, software deployment, and role-based access control. 
