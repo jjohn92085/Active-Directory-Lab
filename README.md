@@ -139,10 +139,10 @@ During software deployment, the Chrome installation failed due to setting the in
 ![GPO](Screenshots/control-panel-disable.png)
 
 ### 📦 Software Deployment (Chrome GPO)
-![Chrome GPO](Screenshots/chrome-install-2.png)
+![Chrome GPO](Screenshots/Chrome-install-2.png)
 
 ### 🌐 Chrome Installed on Client
-![Chrome Installed](Screenshots/chrome-install-7.png)
+![Chrome Installed](Screenshots/Chrome-install-7.png)
 
 ### 💾 Drive Mapping (Z:)
 ![Drive Mapping](Screenshots/mapped-drive-2.png)
