@@ -122,22 +122,35 @@ During software deployment, the Chrome installation failed due to setting the in
   - Share permissions
   - NTFS permissions
 
+### Issue: Permissions inheritance blocking folder access changes
+- Fix: Disabled inheritance and applied explicit permissions
+
 ---
 
 ## 📸 Screenshots
 
-### OU Structure
-![OU](Screenshots/ou-structure.png)
+## 📸 Screenshots
 
-### GPO Configuration
-![GPO](Screenshots/gpo.png)
+### 🏢 OU Structure
+![OU Structure](Screenshots/GP 1.png)
 
-### Chrome Installed
-![Chrome](Screenshots/chrome-installed.png)
+### ⚙️ GPO Configuration
+![GPO](Screenshots/Control Panel disable.png)
 
-### Drive Mapping
-![Drive](Screenshots/drive-mapping.png)
+### 💻 Software Deployment (Chrome GPO)
+![Chrome GPO](Screenshots/Chrome install 2.png)
 
+### 🌐 Chrome Installed on Client
+![Chrome Installed](Screenshots/Chrome install 7.png)
+
+### 💾 Drive Mapping (Z:)
+![Drive Mapping](Screenshots/Mapped drive 2.png)
+
+### 🔐 Role-Based Access Control (RBAC)
+![RBAC](Screenshots/RBAC 3.png)
+
+### 🔑 Password Policy
+![Password Policy](Screenshots/Password config 2.png)
 ## 🎯 Summary
 
 This project demonstrates hands-on experience with Active Directory administration, including OU design, Group Policy management, software deployment, and role-based access control. 
