@@ -1,6 +1,6 @@
 Active Directory Home Lab: Enterprise Domain Deployment & Security Implementation
 
-Table of Contents:
+## 📑 Table of Contents
 
 - [Purpose](#purpose)
 - [Project Overview](#project-overview)
@@ -11,21 +11,19 @@ Table of Contents:
 - [What I Learned](#what-i-learned)
 - [Future Enhancements](#future-enhancements)
   
-Purpose:
+## 🎯 Purpose
 
 The purpose of this AD project is to create a simulated business environment for testing purposes
 
-Project Overview:
+## 🧭 Project Overview
 
 This project has the initial setup of users in a business environment as well as setting or restricting access based on the needs of each department and team. It is meant to streamline activation and implementation of necessary and needed features for each user to match their intended workflows
 
-
-
-Architecture:
+## 🏗️ Architecture
 
 ![AD Lab Diagram](Diagrams/ad-lab-diagram.png)
 
-Features:
+## 🔒 Features & Security Controls
 
 - Create organizational units with security groups for new business users  
 - Restrict access to CMD to prevent users from improperly accessing system files or running malicious code  
@@ -36,14 +34,14 @@ Features:
 - Set a default password policy to prevent repeated login attempts  
 - Implement password expiration and renewal
 
-Technologies Used:
+## 🛠️ Technologies Used
 
 - Windows Server 2022 (Domain Controller)
 - Windows 10 Iso Client VM
 - Hyper-V virtualization
 - Domain: lab.local
 
-Process:
+## ⚙️ Process
 
 This is the initial setup of the AD VM using generation 2 for secure boot and UEFI firmware to prevent malicious code from running with only digitally signed software and faster startup.
 
@@ -171,7 +169,7 @@ Now the user is locked out after 5 failed attempts
 
 ![PW GPO](./Images/Password-config-4.png)
 
-What I learned:
+## 🧠 What I Learned
 
 - The scope of GPO is determined by security filtering — both Authenticated Users and specific security groups are required for proper application  
 - Inheritance must be removed or modified to prevent unintended access from additional security groups on shared folders  
@@ -181,7 +179,7 @@ What I learned:
 - Mapped drives follow users across machines, but **NTFS permissions** ultimately control access to files and folders  
 - Security configurations should be applied at the **organizational unit, group, and user level**, since different groups may require different levels of access
 
-Future Enhancements:
+## 🚀 Future Enhancements
 
 - FGPP could have been implemented for specific security groups that overrides default domain password policy. It, however, would require specific requirements definition for the group that needed it such as temporary users.
 
