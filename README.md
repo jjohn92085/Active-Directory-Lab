@@ -14,7 +14,7 @@
   
 ## 🎯 Purpose
 
-The purpose of this AD project is to create a simulated business environment for testing purposes
+The purpose of this project is to simulate a real-world enterprise Active Directory environment for user management, security policy enforcement, and access control.
 
 ## 🧭 Project Overview
 
