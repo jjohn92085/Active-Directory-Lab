@@ -18,7 +18,7 @@ The purpose of this project is to simulate a real-world enterprise Active Direct
 
 ## 🧭 Project Overview
 
-This project has the initial setup of users in a business environment as well as setting or restricting access based on the needs of each department and team. It is meant to streamline activation and implementation of necessary and needed features for each user to match their intended workflows
+This project demonstrates the setup of users in a business environment, along with configuring and restricting access based on departmental and team requirements. It is designed to streamline user provisioning and implement necessary features to support real-world workflows.
 
 ## 🏗️ Architecture
 
