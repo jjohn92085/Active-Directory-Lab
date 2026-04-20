@@ -1,3 +1,16 @@
+Active Directory Home Lab: Enterprise Domain Deployment & Security Implementation
+
+Table of Contents:
+
+- [Purpose](#purpose)
+- [Project Overview](#project-overview)
+- [Architecture](#architecture)
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Process](#process)
+- [What I Learned](#what-i-learned)
+- [Future Enhancements](#future-enhancements)
+  
 Purpose:
 
 The purpose of this AD project is to create a simulated business environment for testing purposes
@@ -5,6 +18,8 @@ The purpose of this AD project is to create a simulated business environment for
 Project Overview:
 
 This project has the initial setup of users in a business environment as well as setting or restricting access based on the needs of each department and team. It is meant to streamline activation and implementation of necessary and needed features for each user to match their intended workflows
+
+
 
 Architecture:
 
@@ -21,12 +36,12 @@ Features:
 - Set a default password policy to prevent repeated login attempts  
 - Implement password expiration and renewal
 
-Environment/Technology:
+Technologies Used:
 
-Windows Server 2022 (Domain Controller)
-Windows 10 Iso Client VM
-Hyper-V virtualization
-Domain: lab.local
+- Windows Server 2022 (Domain Controller)
+- Windows 10 Iso Client VM
+- Hyper-V virtualization
+- Domain: lab.local
 
 Process:
 
@@ -156,7 +171,7 @@ Now the user is locked out after 5 failed attempts
 
 ![PW GPO](./Images/Password-config-4.png)
 
-Key Takeaways:
+What I learned:
 
 - The scope of GPO is determined by security filtering — both Authenticated Users and specific security groups are required for proper application  
 - Inheritance must be removed or modified to prevent unintended access from additional security groups on shared folders  
@@ -166,7 +181,7 @@ Key Takeaways:
 - Mapped drives follow users across machines, but **NTFS permissions** ultimately control access to files and folders  
 - Security configurations should be applied at the **organizational unit, group, and user level**, since different groups may require different levels of access
 
-Future Improvements:
+Future Enhancements:
 
 - FGPP could have been implemented for specific security groups that overrides default domain password policy. It, however, would require specific requirements definition for the group that needed it such as temporary users.
 
