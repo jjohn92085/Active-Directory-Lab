@@ -49,7 +49,7 @@ Here the AD DC role is being installed on the newly deployed AD VM WIN-3RJET1E41
 
 ![AD Install](./Images/AD-install-5.png)
 
-Here a static IP was set on the AD server so the workstation can connect to it at the same location and the DNS record is correct
+Here a static IP was set on the AD server so the workstation can connect to it at the same location and the DNS record is stable
 
 ![AD Install](./Images/AD-install-6.png)
 
