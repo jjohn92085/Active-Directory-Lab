@@ -38,7 +38,7 @@ This project demonstrates the setup of users in a business environment, along wi
 ## 🛠️ Technologies Used
 
 - Windows Server 2022 (Domain Controller)
-- Windows 10 Iso Client VM
+- Windows 10 ISO Client VM
 - Hyper-V virtualization
 - Domain: lab.local
 
