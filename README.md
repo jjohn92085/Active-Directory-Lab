@@ -168,6 +168,6 @@ Key Takeaways:
 
 Future Improvements:
 
-FGPP could have been implemented for specific security groups that overrides default domain password policy. It, however, would require specific requirements definition for the group that needed it such as temporary users.
+- FGPP could have been implemented for specific security groups that overrides default domain password policy. It, however, would require specific requirements definition for the group that needed it such as temporary users.
 
-A PowerShell script could have been added to automatically test implementations such as network drive access, software installs, domain join etc. This could be executed when  the user logins in to verify the GPO applied correctly such as running a gpupdate /force in cmd.
+- A PowerShell script could have been added to automatically test implementations such as network drive access, software installs, domain join etc. This could be executed when  the user logins in to verify the GPO applied correctly such as running a gpupdate /force in cmd.
