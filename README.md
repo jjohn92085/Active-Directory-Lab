@@ -132,7 +132,12 @@ During software deployment, the Chrome installation failed due to setting the in
 ## 📸 Screenshots
 
 ### 🏢 OU Structure
-![OU Structure](Screenshots/ou-structure.png)
+
+
+This is the initial setup of the AD VM using generation 2 for secure boot and UEFI firmware to prevent malicious code from running with only digitally signed software and faster startup.
+
+![AD Install](./Images/AD-install-1.png)<img width="1360" height="55" alt="image" src="https://github.com/user-attachments/assets/318adcd3-a586-4031-ab36-9e8cc3eacaca" />
+
 
 ### 🔗 GPO Links and OU Assignment
 ![GPO Links](Screenshots/gpo-links.png)
