@@ -35,7 +35,6 @@ This is the initial setup of the AD VM using generation 2 for secure boot and UE
 
 Since this project was only limited to 3 OUs and user groups, 2gb was used as a minimum to handle basic lookups and searches
 
-
 ![AD Install](./Images/AD-install-2.png)
 
 127 GB is the max size hyper-v allows but disk size was intended to allow installing Windows, the DC, and adding any additional third party software and files for sharing with workstations
@@ -80,4 +79,87 @@ Here is both default domain policy and domain controller enabled
 
 For IT standard users security group, a GPO was added to block control panel access by enabling the policy with the GPO first
 
-![CP GPO](./Images/DC-config-5.png)<img width="1530" height="1502" alt="image" src="https://github.com/user-attachments/assets/63825cac-1508-498e-9214-8f2a3ee2b69d" />
+![CP GPO](./Images/ControlPanel-GPO-1.png)
+
+Initially the policy did not apply on the client VM because it only had IT_Standard_Users that allowed apply only access. The GPO had to be edited to include authenticated users with read permission to allow anyone who logs into the domain on the workstation to interpret the policy first.
+
+![CP GPO](./Images/ControlPanel-GPO-2.png)
+
+Unfortunately, the GPO did not apply successfully until gpupdate /force was run and gpresult /r after to confirm the result
+
+![CP GPO](./Images/ControlPanel-GPO-3.png)
+
+![CP GPO](./Images/ControlPanel-GPO-4.png)
+
+The same process was followed to add a GPO to disable CMD for HR_Users security group by adding authenticated users and then running gpupdate /force and gpresult /r on the client VM
+
+![CMD GPO](./Images/CMD-GPO-1.png)
+
+Again, authenticated users and HR_Users needed read permission to read and apply the new GPO
+
+![CMD GPO](./Images/CMD-GPO-2.png)
+
+Now cmd is no longer accessible on the client VM
+
+![CMD GPO](./Images/CMD-GPO-3.png)
+
+For Sales_Users security group, a GPO was added to schedule an automatic install of Chrome on the client VM. This used a shared folder on the DC with domain computers security group set on it to allow access to the installer during the boot process on the client. Originally, domain users was added to the security for the shared Software folder but that was quickly removed as that only allowed a manual install once the Windows was logged in and not automatic.
+
+![Chrome GPO](./Images/Chrome-install-1.png)
+
+Upon checking programs after reboot, Chrome was successfully installed automatically
+
+![Chrome GPO](./Images/Chrome-install-2.png)
+
+Similarly, a mapped drive was added to setup RBAC between the different OUs and security groups using GPOs
+
+![RBAC GPO](./Images/RBAC-install-1.png)
+
+Each OU received its own folder with a  specific security group assigned that had modify and read access. This allowed only the specific OU security group to access the folder while denying others.
+
+![RBAC GPO](./Images/RBAC-install-2.png)
+
+As part of troubleshooting inheritance from the parent folder had to be converted to allow permissions to be edited on the OU specific folder to remove other security groups that did not need access
+
+![RBAC GPO](./Images/RBAC-install-3.png)
+
+Now the network drive (Z:) with the specific OU folder was accessible by users in the specific Sales security group and not others
+
+![RBAC GPO](./Images/RBAC-install-4.png)
+
+Here the sales user could not access the IT departments folder so it is working as designed
+
+![RBAC GPO](./Images/RBAC-install-5.png)
+
+Finally, password policy was set on the default domain for all security groups. This included a 30 day password expiration timer but also a lockout threshold of 5 invalid login attempts etc.
+
+![PW GPO](./Images/Password-config-1.png)
+
+One was a password policy for setting a time to renew the password by the user and another to lock the user out if they made too many failed login attempts
+
+![PW GPO](./Images/Password-config-2.png)
+
+After gpupdate /force and rebooting the DC and workstation, the new policy went into effect for all OU security groups
+
+![PW GPO](./Images/Password-config-3.png)
+
+Now the user is locked out after 5 failed attempts
+
+![PW GPO](./Images/Password-config-4.png)
+
+Key Takeaways:
+
+The scope of GPO is determined by the security filtering setup - both authenticated users and specific security group are needed for it to successfully apply
+Inheritance has to be converted to remove additional security groups from specific folder permissions; otherwise, other teams and groups will have access to the same folder
+The default domain policy controls the entire organization's password policy, including all security groups, unless there's FGPP that overrides it
+Domain computers group must be added to shared folders to allow windows to process installations during the boot process rather than after a user logs in
+Role based access does not require explicitly denying other groups on the specific folder - only simply setting the one security group that needs access
+When you map drives to users in AD, any workstation they log into will provide them access but NTFS permissions  ultimately set access to files and folders
+Security considerations, such as access to system settings, should be considered an organization, security group, and individual user level - what may work for one group may not work for others
+
+Future Improvements:
+
+FGPP could have been implemented for specific security groups that overrides default domain password policy. It, however, would require specific requirements definition for the group that needed it such as temporary users.
+
+A PowerShell script could have been added to automatically test implementations such as network drive access, software installs, domain join etc. This could be executed when  the user logins in to verify the GPO applied correctly such as running a gpupdate /force in cmd.
+<img width="1530" height="3057" alt="image" src="https://github.com/user-attachments/assets/07ddc355-6b9c-47e0-bf5e-669199f6bcda" />
