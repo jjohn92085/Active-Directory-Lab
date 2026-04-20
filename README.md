@@ -65,11 +65,19 @@ Here the echo command was run to confirm the client VM was connected to the doma
 
 ![Client Install](./Images/client-install-2.png)
 
-Back on the DC, OUs were created for 3 departments including Sales, IT, and HR with one security group and one user assigned to each
+Back on the DC, the default domain policy and domain controller are enabled
+
+![DC Install](./Images/DC-config-5.png)
+
+Next 3 OUs were created for Sales, IT, and HR departments, with one security group, and one user assigned to each
 
 ![DC Install](./Images/DC-config-2.png)
 
+Sales received Sales_Users, IT received IT_Standard_Users, and HR HR_Users as security groups
+
 ![DC Install](./Images/DC-config-3.png)
+
+One user was added to each security group
 
 ![DC Install](./Images/DC-config-4.png)
 
