@@ -1,4 +1,4 @@
-Active Directory Home Lab: Enterprise Domain Deployment & Security Implementation
+# Active Directory Home Lab: Enterprise Domain Deployment & Security Implementation
 
 ## 📑 Table of Contents
 
