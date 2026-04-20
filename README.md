@@ -12,13 +12,14 @@ Architecture:
 
 Features:
 
-Create organizational units with security groups for new business users
-Restrict access to CMD to prevent users improperly accessing system files or running malicious code
-Disable control panel for standard users to avoid system security and network changes
-Install basic web browsing software automatically for new users to have internet access at the organization
-Map network drives to provide access to shared files and folders for specific workstation and security groups
-Create role based access for shared files and folders
-Set a default password policy to prevent repeated login attempts and implement password expiration/renewal
+- Create organizational units with security groups for new business users  
+- Restrict access to CMD to prevent users from improperly accessing system files or running malicious code  
+- Disable Control Panel for standard users to avoid system security and network changes  
+- Install basic web browsing software automatically for new users  
+- Map network drives to provide access to shared files and folders for specific workstations and security groups  
+- Create role-based access for shared files and folders  
+- Set a default password policy to prevent repeated login attempts  
+- Implement password expiration and renewal
 
 Environment/Technology:
 
@@ -157,13 +158,13 @@ Now the user is locked out after 5 failed attempts
 
 Key Takeaways:
 
-The scope of GPO is determined by the security filtering setup - both authenticated users and specific security group are needed for it to successfully apply
-Inheritance has to be converted to remove additional security groups from specific folder permissions; otherwise, other teams and groups will have access to the same folder
-The default domain policy controls the entire organization's password policy, including all security groups, unless there's FGPP that overrides it
-Domain computers group must be added to shared folders to allow windows to process installations during the boot process rather than after a user logs in
-Role based access does not require explicitly denying other groups on the specific folder - only simply setting the one security group that needs access
-When you map drives to users in AD, any workstation they log into will provide them access but NTFS permissions  ultimately set access to files and folders
-Security considerations, such as access to system settings, should be considered an organization, security group, and individual user level - what may work for one group may not work for others
+- The scope of GPO is determined by security filtering — both Authenticated Users and specific security groups are required for proper application  
+- Inheritance must be removed or modified to prevent unintended access from additional security groups on shared folders  
+- The **Default Domain Policy** controls organization-wide password settings unless overridden by **Fine-Grained Password Policies (FGPP)**  
+- The **Domain Computers** group must be added to shared folders to allow software installations during the boot process (before user logon)  
+- Role-Based Access Control (RBAC) does not require explicitly denying other groups — simply granting access to the correct security group is sufficient  
+- Mapped drives follow users across machines, but **NTFS permissions** ultimately control access to files and folders  
+- Security configurations should be applied at the **organizational unit, group, and user level**, since different groups may require different levels of access
 
 Future Improvements:
 
