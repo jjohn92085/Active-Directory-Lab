@@ -6,7 +6,7 @@ Project Overview:
 
 This project has the initial setup of users in a business environment as well as setting or restricting access based on the needs of each department and team. It is meant to streamline activation and implementation of necessary and needed features for each user to match their intended workflows
 
-Design:
+Architecture:
 
 ![AD Lab Diagram](Diagrams/ad-lab-diagram.png)
 
@@ -170,4 +170,3 @@ Future Improvements:
 FGPP could have been implemented for specific security groups that overrides default domain password policy. It, however, would require specific requirements definition for the group that needed it such as temporary users.
 
 A PowerShell script could have been added to automatically test implementations such as network drive access, software installs, domain join etc. This could be executed when  the user logins in to verify the GPO applied correctly such as running a gpupdate /force in cmd.
-<img width="1530" height="3057" alt="image" src="https://github.com/user-attachments/assets/07ddc355-6b9c-47e0-bf5e-669199f6bcda" />
